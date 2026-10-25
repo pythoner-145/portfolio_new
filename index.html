@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vishal Sen — CS Student &amp; AI/ML Enthusiast</title>
+<meta name="description" content="Vishal Sen — B.Tech CSE student building foundations in Python, C/C++, and AI-driven data analysis. Explore projects, coursework, and certifications.">
+<meta name="theme-color" content="#0A0E12">
+<!-- NOTE: frame-ancestors, HSTS, X-Frame-Options must be sent as HTTP headers (see vercel.json / _headers / .htaccess). Meta CSP cannot enforce them. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0E12'/%3E%3Ctext x='16' y='22' font-family='Space Grotesk,Arial,sans-serif' font-weight='700' font-size='16' fill='%234C6EF5' text-anchor='middle'%3EVS%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vishal Sen — CS Student &amp; AI/ML Enthusiast">
+<meta property="og:description" content="B.Tech CSE student building foundations in Python, C/C++, and AI-driven data analysis. Explore projects, coursework, and certifications.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vishal Sen — CS Student &amp; AI/ML Enthusiast">
+<meta name="twitter:description" content="B.Tech CSE student building foundations in Python, C/C++, and AI-driven data analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="style.css">
+<noscript><p class="mono noscript-note">JavaScript is off — content is still readable, interactive terminal and animations are disabled.</p></noscript>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- NAV -->
+<div class="nav-progress" aria-hidden="true"><div class="nav-progress-fill" id="navProgressFill"></div></div>
+<nav class="nav">
+  <div class="nav-logo">VS<span class="dot">.</span></div>
+  <div class="nav-right">
+    <div class="nav-links" id="navLinks">
+      <a href="#about" data-nav="about">About</a>
+      <a href="#skills" data-nav="skills">Stack</a>
+      <a href="#education" data-nav="education">Education</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#contact" data-nav="contact">Connect</a>
+    </div>
+    <button type="button" class="sound-toggle mono" id="soundToggle" aria-pressed="false" aria-label="Turn on interface sound"><span class="sound-icon" aria-hidden="true">🔈</span></button>
+    <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <canvas id="network"></canvas>
+  <div class="hero-content">
+    <div class="terminal-block">
+      <p class="terminal-line mono" id="terminalLine" role="textbox" aria-label="Interactive terminal — click and type a command, try 'help'" tabindex="0"><span class="prompt">$</span> <span id="terminalText"></span><span class="terminal-cursor" id="terminalCursor"></span></p>
+      <span class="terminal-hint mono" id="terminalHint" aria-hidden="true">try: help</span>
+      <div class="terminal-output mono" id="terminalOutput" aria-live="polite"></div>
+      <input type="text" id="terminalInput" class="terminal-hidden-input" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="Type a terminal command" tabindex="-1" maxlength="200">
+    </div>
+    <p class="eyebrow mono">B.Tech CSE · Class of 2029 · Exploring AI &amp; Data Science</p>
+    <h1 class="hero-title">
+      <span class="line">Turning raw</span>
+      <span class="line accent-line">data into</span>
+      <span class="line">decisions.</span>
+    </h1>
+    <p class="hero-sub">Hi, I'm <strong>Vishal Sen</strong> — a Computer Science undergrad building my foundations in programming and data analysis, with a growing focus on AI and machine learning. Learning by building small, real things.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">See my work <span class="arrow">→</span></a>
+      <a href="#contact" class="btn-ghost">Get in touch</a>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <span class="mono">scroll</span>
+    <div class="scroll-line"><div class="scroll-fill"></div></div>
+  </div>
+</section>
+
+<!-- METRICS TAPE -->
+<div class="tape-wrap">
+  <div class="tape" id="tape">
+    <!-- duplicated via JS -->
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="section-head">
+    <span class="mono tag">About</span>
+    <h2>The story so far</h2>
+  </div>
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <p>I'm a Computer Science student at Sushila Devi Bansal College of Engineering, Indore, with a growing interest in Artificial Intelligence, Machine Learning, and Data Science. My starting point was data analysis with Excel and generative AI tools, and I've been building outward from there — into Python, C/C++, and core problem-solving.</p>
+      <p>I don't have production experience yet. What I bring is curiosity, consistency, and a habit of finishing what I start — from CLI tools built line-by-line to a completed certification in AI-driven data analysis. This site is a small proof of that same habit.</p>
+      <a href="#education" class="text-link">See my certifications →</a>
+    </div>
+    <div class="about-stats reveal">
+      <div class="stat-card">
+        <span class="stat-num" data-count="2">0</span>
+        <span class="stat-label">Python CLI projects built</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="1">0</span>
+        <span class="stat-label">certification completed</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num stat-static">2029</span>
+        <span class="stat-label">expected graduation, B.Tech CSE</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" data-count="3">0</span>
+        <span class="stat-label">core soft skills sharpened</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="section-head">
+    <span class="mono tag">Stack</span>
+    <h2>Where I'm building strength</h2>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Skill card — press Enter to expand details">
+      <div class="skill-top">
+        <span class="skill-icon">🐍</span>
+        <span class="skill-level mono">learning</span>
+      </div>
+      <h3>Python</h3>
+      <p>Core syntax, control flow, and beginner-level scripting.</p>
+      <div class="skill-bar"><div class="skill-fill" data-progress="30"></div></div>
+      <p class="skill-detail">Built two CLI projects from scratch — a cyber-risk grid simulator and a randomized guessing game — using loops, conditionals, and input handling.</p>
+      <span class="skill-more mono">details <span class="chevron">+</span></span>
+    </div>
+    <div class="skill-card reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Skill card — press Enter to expand details">
+      <div class="skill-top">
+        <span class="skill-icon">⚙️</span>
+        <span class="skill-level mono">learning</span>
+      </div>
+      <h3>C &amp; C++</h3>
+      <p>Fundamentals of syntax, logic, and structured programming.</p>
+      <div class="skill-bar"><div class="skill-fill" data-progress="30"></div></div>
+      <p class="skill-detail">Working through this alongside CSE coursework at Sushila Devi Bansal College of Engineering — building the foundations before applying it in larger projects.</p>
+      <span class="skill-more mono">details <span class="chevron">+</span></span>
+    </div>
+    <div class="skill-card reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Skill card — press Enter to expand details">
+      <div class="skill-top">
+        <span class="skill-icon">📊</span>
+        <span class="skill-level mono">growing</span>
+      </div>
+      <h3>Data Analysis</h3>
+      <p>Excel and generative AI tools for data-driven insights.</p>
+      <div class="skill-bar"><div class="skill-fill" data-progress="55"></div></div>
+      <p class="skill-detail">Completed the Tata × Forage "Data Analysis with Gen AI" certification, focused on AI-driven insights and visualization.</p>
+      <span class="skill-more mono">details <span class="chevron">+</span></span>
+    </div>
+    <div class="skill-card reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Skill card — press Enter to expand details">
+      <div class="skill-top">
+        <span class="skill-icon">🧩</span>
+        <span class="skill-level mono">core</span>
+      </div>
+      <h3>Problem Solving</h3>
+      <p>Analytical thinking applied to logic-driven CS problems.</p>
+      <div class="skill-bar"><div class="skill-fill" data-progress="70"></div></div>
+      <p class="skill-detail">Applied directly in both CLI projects — nested-loop risk logic in the threat grid, and randomized-input handling with real-time validation in the guessing game.</p>
+      <span class="skill-more mono">details <span class="chevron">+</span></span>
+    </div>
+    <div class="skill-card reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Skill card — press Enter to expand details">
+      <div class="skill-top">
+        <span class="skill-icon">🗣️</span>
+        <span class="skill-level mono">core</span>
+      </div>
+      <h3>Communication</h3>
+      <p>Presenting ideas clearly, in teams and one-on-one.</p>
+      <div class="skill-bar"><div class="skill-fill" data-progress="65"></div></div>
+      <p class="skill-detail">Practiced through coursework presentations and breaking down technical work — like the projects on this page — for people outside CS.</p>
+      <span class="skill-more mono">details <span class="chevron">+</span></span>
+    </div>
+    <div class="skill-card reveal" role="button" tabindex="0" aria-expanded="false" aria-label="Skill card — press Enter to expand details">
+      <div class="skill-top">
+        <span class="skill-icon">🤝</span>
+        <span class="skill-level mono">core</span>
+      </div>
+      <h3>Adaptability &amp; Teamwork</h3>
+      <p>Comfortable collaborating and adjusting to new problems.</p>
+      <div class="skill-bar"><div class="skill-fill" data-progress="65"></div></div>
+      <p class="skill-detail">Built while balancing coursework, self-directed learning, and project deadlines — adjusting approach whenever a new problem didn't fit the original plan.</p>
+      <span class="skill-more mono">details <span class="chevron">+</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="education" id="education">
+  <div class="section-head">
+    <span class="mono tag">Education</span>
+    <h2>Coursework &amp; credentials</h2>
+  </div>
+  <div class="edu-list">
+
+    <div class="edu-item reveal">
+      <span class="edu-year mono">2025 — 2029</span>
+      <div class="edu-body">
+        <h3>B.Tech, Computer Science &amp; Engineering</h3>
+        <p>Sushila Devi Bansal College of Engineering, Indore</p>
+      </div>
+      <span class="edu-tag mono">in progress</span>
+    </div>
+
+    <div class="edu-item reveal">
+      <span class="edu-year mono">2025</span>
+      <div class="edu-body">
+        <h3>Senior Secondary (Class 12) · Science</h3>
+        <p>Govt. School of Excellence, Barwani</p>
+      </div>
+      <span class="edu-tag mono">completed</span>
+    </div>
+
+    <div class="edu-item reveal">
+      <span class="edu-year mono">2023</span>
+      <div class="edu-body">
+        <h3>Secondary School (Class 10)</h3>
+        <p>Govt. School of Excellence, Barwani</p>
+      </div>
+      <span class="edu-tag mono">completed</span>
+    </div>
+
+    <div class="edu-item edu-cert reveal">
+      <span class="edu-year mono">cert</span>
+      <div class="edu-body">
+        <h3>Data Analysis with Gen AI</h3>
+        <p>Tata · Forage — focused on AI-driven data insights and visualization.</p>
+      </div>
+      <span class="edu-tag mono">earned</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-head">
+    <span class="mono tag">Projects</span>
+    <h2>Notebook of experiments</h2>
+  </div>
+  <div class="projects-list">
+
+    <article class="project-card reveal">
+      <div class="project-visual" data-chart="grid">
+        <canvas class="mini-chart"></canvas>
+      </div>
+      <div class="project-info">
+        <span class="mono project-tag">Python · CLI · matrix logic</span>
+        <h3>Cyber Threat Grid Simulator</h3>
+        <p>A command-line tool that models cyber-risk across a 2D grid, using nested loops and conditional logic to flag risk levels cell by cell in real time.</p>
+        <div class="project-links">
+          <a href="https://github.com/pythoner-145/safe_score_predictor" class="text-link" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">View code →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-visual" data-chart="terminal">
+        <canvas class="mini-chart"></canvas>
+      </div>
+      <div class="project-info">
+        <span class="mono project-tag">Python · CLI · random logic</span>
+        <h3>CLI Guessing Game</h3>
+        <p>An interactive command-line game built with randomized number generation and continuous control loops, with real-time input validation and feedback.</p>
+        <div class="project-links">
+          <a href="https://github.com/pythoner-145/guess_game" class="text-link" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">View code →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project-card reveal">
+      <div class="project-visual" data-chart="safety">
+        <canvas class="mini-chart"></canvas>
+        <div class="chart-caption mono" id="safetyCaption">click a waypoint →</div>
+      </div>
+      <div class="project-info">
+        <span class="mono project-tag">Python · OpenStreetMap API · Gemini API · Team hackathon project</span>
+        <h3>RakshakTech — Safe Path Predictor</h3>
+        <p>Built with my team, Rakshak Tech, for the BGI Hackathon 2026. A women's-safety tool that pulls surrounding-area data — shops, streetlights, 24/7 services — from the OpenStreetMap API, scores how safe a walking path is, then uses the Gemini API to analyze that score and predict overall path safety.</p>
+        <div class="project-links">
+          <a href="https://rakshak-tech-women-safety.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Live demo →</a>
+          <a href="https://github.com/pythoner-145/RakshakTech--Women_Safety-" class="text-link" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">View code →</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <canvas id="networkSmall"></canvas>
+  <div class="contact-content">
+    <span class="mono tag">Connect</span>
+    <h2>Let's compile something.</h2>
+    <p>Open to internships, collaborations, or just talking programming and data with people who'll be patient with someone early in their CS journey.</p>
+    <a href="#" id="emailLink" class="btn-primary large" data-enc="bWFpbHRvOnZpc2hhbHNlbnNlbjkyOEBnbWFpbC5jb20=" aria-label="Email Vishal Sen (address protected, JavaScript required)">Say hello <span class="arrow" aria-hidden="true">→</span></a>
+    <p class="mono contact-phone" id="phoneText" data-enc="KzkxIDkzNDA5IDY5MjY1">[enable JavaScript to view phone]</p>
+    <noscript><p class="mono noscript-note">Email: vishalsensen [at] gmail [dot] com — phone available on request.</p></noscript>
+    <div class="social-row">
+      <a href="https://github.com/pythoner-145" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/vishal-sen-4b7823385/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="mono">© 2026 Vishal Sen. Designed and built from scratch.</span>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="script.js"></script>
+</body>
+</html>
